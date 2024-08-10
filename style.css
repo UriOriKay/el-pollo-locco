@@ -1,0 +1,161 @@
+@font-face {
+    font-family: 'zabars';
+    src:url('fonts/zabars.ttf') format('truetype');
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('img/10_backgrounds/bg_el_pollo_locco_1.png');
+    background-position: cover;
+    font-family: 'zabars', Arial, Helvetica, sans-serif; 
+}
+
+.d-none {
+    display: none !important;
+}
+
+#screen {
+    position: relative;
+}
+
+#canvas {
+    background-color: black;
+    width: 100%;
+    height: 100%
+}
+
+#ende {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}    
+
+#hub {
+    position: absolute;
+    bottom: 2%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 5%;
+    width: 90%;
+    gap: 3px
+}
+
+.panel {
+    display: flex;
+    gap: 10px;
+}
+
+#sidehub {
+    position: absolute;
+    right: 2%;
+    top: 2%;
+}
+
+#music {
+    background-color: rgba(0,0,0,0.3);
+}
+
+.mobile-button {
+    height: 40px;
+    width: 40px;
+}
+
+
+#intro {
+    position: absolute;
+    bottom: 4%;
+    left: 40%;
+}
+
+#intro button{
+    background-color: rgba(0,0,0,0.3);
+    font-size: 26px;
+}
+
+#fullscreen-btn {
+    background: none;
+    border: none;
+}
+
+#instruction {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(255, 146, 71, 0.90);
+    font-size: 37px;
+}
+
+#intro-btn{
+    margin-top: 10px;
+    background-color: rgba(0,0,0,0.3);
+    font-size: 26px;
+}
+
+#landscape {
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 24px;
+  background-color: rgba(255, 146, 71, 0.90);
+}
+#landscape img {
+  width: 50%;
+  rotate: 270deg;
+  height: 50vh;
+}
+
+#start-img {
+    position: absolute;
+    left: 42%;
+    top: 35%;
+    width: 20%;
+    height: 30%;
+    opacity: 0.75;
+}
+
+
+
+@media screen and (max-width: 720px) {
+    canvas, #ende, #screen{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #intro button{
+        font-size: 80%;
+    }
+
+}
+
+@media screen and (orientation: portrait) {
+    #landscape {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        display: flex;
+    }
+    canvas, #screen {
+        display: none;
+    }
+}
+@media screen and (max-height: 500px) {
+    canvas, #ende, #screen{
+        width: 100%;
+        height: 100%;
+    }
+}
